@@ -41,7 +41,7 @@ sudo apt-get install <packagename>.deb
 ## Understanding Routing
 Routing is the penultimate step in the flow wherein we connect the components. During routing, wire-like pathways known as traces are placed in the design.
 Routing is also divided into two phases: global routing and detailed routing. Right before global routing, OpenFASoC calls `pre_global_route.tcl`.
-This script sources two other files: `add_ndr_rules.tcl`, which adds an NDR rule to the VIN net to improve routes that connect both voltage domains,
+This script sources two other files: `create_routable_power_net.tcl`, which adds an NDR rule to the VIN net to improve routes that connect both voltage domains,
 and `create_custom_connections.tcl`, which creates the connection between the VIN net and the HEADER instances.
 
 At the end, OpenROAD Flow will output its logs under `flow/reports/`, and its results under `flow/results/`.
