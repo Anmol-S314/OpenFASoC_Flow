@@ -47,10 +47,11 @@ and `create_custom_connections.tcl`, which creates the connection between the VI
 At the end, OpenROAD Flow will output its logs under `flow/reports/`, and its results under `flow/results/`.
 Note: All the script files are found in `temp-sense-gen/flow/scripts`.
 ### Global Routing
-First the lef files such as TECH_LEF and SC_LEF are read along with the lib and design files.
-The design file here is `5_0_ndr.def` along with `2_floorplan.sdc`. With this information global routing is begun.
+First we load the files `4_cts.odb` and `4_cts.sdc`. With this information pre-global routing is initiated. In this stage rotable power nets are added with the `create_routable_power_net.tcl` file and creates connections custom to the temp-sense-gen design using `create_custom_connections.tcl` file.
 
-Here all the report_checks are carried out such as **report_tns**, **report_wns** and all the results are stored in the file `5_1_grt.odb`.
+Global-routing is carried out using the `route.guide` which has matrices for every pin specification in the design.
+
+In the next step all the report_checks are carried out such as **report_tns**, **report_wns** and all the results are stored in the file `5_1_grt.odb`.
 
 ### Detailed Routing
 The input files are `4_cts.odb` and `5_1_grt.odb` which is acquired after performing global routing.
