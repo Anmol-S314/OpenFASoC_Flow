@@ -56,3 +56,12 @@ In the next step all the report_checks are carried out such as **report_tns**, *
 ### Detailed Routing
 The input files are `4_cts.odb` and `5_1_grt.odb` which is acquired after performing global routing.
 The final output is dumped in the files `5_route.sdc` and `5_2_route.odb`.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/78084271/199914547-86820bc8-97d6-453b-bc59-a03ef4cf1943.png" width="500" alt="accessibility text">
+</p>
+<p align="center">
+    <em>Final Layout After Routing</em>
+</p>
+
+
