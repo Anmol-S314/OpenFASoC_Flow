@@ -1,4 +1,4 @@
-# OpenFASoC_Flow
+# OpenFASoC_Flow_Routing
 ## What is OpenFASoC
 FASoC stands for Fully Autonomous System-on-Chip
 
