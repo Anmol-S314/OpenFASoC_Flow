@@ -53,7 +53,7 @@ APR is run using the `temp-sense-gen.py` python script, present at the following
 </p>
 
 At the end, OpenROAD Flow will output its logs under `flow/reports/`, and its results under `flow/results/`.
-Note: All the script files are found in `temp-sense-gen/flow/scripts`.
+Note: All the script files are found in [temp-sense-gen/flow/scripts](https://github.com/idea-fasoc/OpenFASOC/tree/main/openfasoc/generators/temp-sense-gen/flow/scripts).
 ### Global Routing
 First we load the files `4_cts.odb` and `4_cts.sdc`. With this information pre-global routing is initiated. In this stage routable power nets are added with the `create_routable_power_net.tcl` file and creates connections custom to the temp-sense-gen design using `create_custom_connections.tcl` file.
 
