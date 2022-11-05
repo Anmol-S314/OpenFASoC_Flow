@@ -63,7 +63,7 @@ First we load the files `4_cts.odb` and `4_cts.sdc`. With this information pre-g
 <p align="center">
     <em>Global pre-routing</em>
 </p>
-Global-routing is carried out using the **route.guide** which has matrices for every pin specification in the design.
+Global-routing is carried out using the route.guide which has matrices for every pin specification in the design.
 
 In the next step all the report_checks are carried out such as **report_tns**, **report_wns** and all the results are stored in the file `5_1_grt.odb`.
 
