@@ -44,7 +44,7 @@ Routing is also divided into two phases: global routing and detailed routing. Ri
 This script sources two other files: `create_routable_power_net.tcl`, which adds an NDR rule to the VIN net to improve routes that connect both voltage domains,
 and `create_custom_connections.tcl`, which creates the connection between the VIN net and the HEADER instances.
 
-APR is run using the `temp-sense-gen.py` python script, present at the following location. https://github.com/idea-fasoc/OpenFASOC/blob/main/openfasoc/generators/temp-sense-gen/tools/temp-sense-gen.py
+APR is run using the `temp-sense-gen.py` python script, present at the following location: [temp-sense-gen.py](https://github.com/idea-fasoc/OpenFASOC/blob/main/openfasoc/generators/temp-sense-gen/tools/temp-sense-gen.py)
 <p align="center">
  <img src="https://user-images.githubusercontent.com/78084271/200106954-b0239209-4b73-4469-94b2-59d1cce4a043.png" width="500" alt="accessibility text">
 </p>
