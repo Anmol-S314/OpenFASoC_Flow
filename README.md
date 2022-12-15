@@ -248,10 +248,23 @@ The gds and lef files of HEADER and SLC cells are pre-created before the start o
  
  ## Future Works
 
- - A few of the errors faced in routing are bypassed(by not creating a routable net for VIN,removing path to create_routable_power_net.tcl in pre_global_route.tcl) ,which is resulting in the incorrect routing of the macro cells which can be clearly seen in the final.gds layout. Need to rectify the errors and run the flow.
-- Routing is crashing, which is bypassed by removing the path to create_routable_power_net.tcl as mentioned above. Rectification and identification of the cause for the crash is needed.
+
+- The errors faced during routing are bypassed by not creating crucial components in the flow such as creating a routable net for VIN, removing path to `create_routable_power_net.tcl` which results in incorrect routing of the macro cells which can be seen in the aux cell placement in the final.gds layout. Further rectification is required.
+- Crashing during the routing stage, which is bypassed by removing the path to create_routable_power_net.tcl. The cause of the crash is yet to be rectified.
 - Warnings are generated in routing for missing connections. Need to verify whether this is due to the errors bypassed in the routing or any new issue.
 - Model File updation for more cases is required to achieve the pll generation for different input requirements that achieves best performance.
+- The gds files generated from the ALIGN tool gives us error during placement due to undefined metal layers (M3, M2) as they must be defined in a specific manner. This mismatch must be further looked at.
+
+## Author
+
+- **Anmol Shetty**
+
+## Acknowledgments
+
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+- Madhav Rao, Associate Professor, IIIT Bangalore
+- Tejas BN, MTech Student, IIIT Bangalore
+- Vinay Rayapati, MTech Student, IIIT Bangalore
 
 
 
