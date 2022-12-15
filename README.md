@@ -132,7 +132,7 @@ Some changes are then made to customize the OpenROAD Flow repo and generate a wo
 
 ## Understanding Routing
 <p align="center">
- <img src="https://user-images.githubusercontent.com/78084271/207877996-6789179e-0ee9-4689-98a3-98f1f38087c6.png" width="600" alt="accessibility text">
+ <img src="https://user-images.githubusercontent.com/78084271/207877996-6789179e-0ee9-4689-98a3-98f1f38087c6.png" width="700" alt="accessibility text">
 </p>
 
 
