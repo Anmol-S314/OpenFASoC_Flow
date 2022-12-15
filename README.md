@@ -103,6 +103,33 @@ sudo make install
 ```
 type `magic` terminal to check whether it installed succesfully or not. Type `exit` to exit magic.
 
+## Understanding OpenFASoC Flow
+
+We have considered the Temp-Sense Generator in building the schematic for the flow.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/78084271/207885968-f8f6b824-6614-451d-a266-cffd0fb73887.png" width="500" alt="accessibility text">
+</p>
+<p align="center">
+    <em>OpenFASoC Flow</em>
+</p>
+
+The OpenFASOC Design flow starts by taking the design specifications in the form of `.json` format. Then the OpenFASOC generator determines the number of auxillary cell to be added to optimize the design. The generator also uses the model file to automatically determine the number of aux-cells to be added based on user-specifications. Here, the model file is saved in the form of a `.csv` file.
+
+In other words, the generator iteratively searches the the model file to find the optimum number of auxillary cells to be added. After finding the optimum structure, the behavioral verilog description is created. Then we use `yosys` to map behavioral code to gate level code. This is then followed by PNR. Place and Route is performed by OpenROAD tool. To further ensure the authenticity of the design OpenRoad does DRC, LVS AND PEX checks. Unlike traditional Analog-Design flow, in OpenFASOC flow, the complete process of aux-cell generation to layout generation is automated which significantly reduced the design time. Hence this process is also called Automatic Place and Route.
+
+
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/78084271/207887250-5a311351-d3cc-4d44-938d-cbc59c3b24c3.png" width="700" alt="accessibility text">
+</p>
+
+
+Since OpenROAD was developed with digital designs in mind, some features do not natively support analog or mixed-signal designs for now. Hence, in the temperature sensor, the physical implementation does not get successfully generated with the original flow.
+
+Some changes are then made to customize the OpenROAD Flow repo and generate a working physical design, summarized in the diagram  given above.
+
+
 ## Understanding Routing
 <p align="center">
  <img src="https://user-images.githubusercontent.com/78084271/207877996-6789179e-0ee9-4689-98a3-98f1f38087c6.png" width="600" alt="accessibility text">
@@ -264,6 +291,7 @@ The gds and lef files of HEADER and SLC cells are pre-created before the start o
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
 - Madhav Rao, Associate Professor, IIIT Bangalore
 - Tejas BN, MTech Student, IIIT Bangalore
+- Mahati Basavaraju, MTech Student, IIIT Bangalore
 - Vinay Rayapati, MTech Student, IIIT Bangalore
 
 
